@@ -9,15 +9,25 @@
 
 </head>
 <body>
-    <h1>User Feedback Form</h1>
     <form action="">
-        <label for="user-name">Username</label><br>
-        <input type="text" id="user-name"><br>
-        <label for="email">Email</label><br>
-        <input type="text" id="email"><br>
-        <label for="comment">Comments</label><br>
-        <textarea name="comments" id="comments"></textarea><br>
-        <button>Submit</button>
+        <h1>USER FEEDBACK FORM</h1>
+        <!-- Username -->
+        <div class="user-input">
+            <label for="user-name">USERNAME</label><br>
+            <input type="text" id="user-name"><br>
+        </div>
+        <!-- Email -->
+        <div class="user-input">
+            <label for="email">EMAIL</label><br>
+            <input type="text" id="email"><br>
+        </div>
+        <!-- Comments -->
+        <div class="user-input">
+            <label for="comments">COMMENTS</label><br>
+            <textarea name="comments" id="comments" rows="10"></textarea><br>
+            <p id="character-count">Character count: </p>
+        </div>
+        <button>SUBMIT</button>
     </form>
 </body>
 </html>
