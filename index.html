@@ -9,23 +9,26 @@
 
 </head>
 <body>
-    <form action="">
+    <form id="feedback-form">
         <h1>USER FEEDBACK FORM</h1>
         <!-- Username -->
         <div class="user-input">
             <label for="user-name">USERNAME</label><br>
             <input type="text" id="user-name"><br>
+            <span class="submission-error" id="username-error"></span>
         </div>
         <!-- Email -->
         <div class="user-input">
             <label for="email">EMAIL</label><br>
             <input type="text" id="email"><br>
+            <span class="submission-error" id="email-error"></span>
         </div>
         <!-- Comments -->
         <div class="user-input">
             <label for="comments">COMMENTS</label><br>
             <textarea name="comments" id="comments" rows="10"></textarea><br>
             <p id="character-count">Character count: </p>
+            <span class="submission-error" id="comments-error"></span>
         </div>
         <button>SUBMIT</button>
     </form>
