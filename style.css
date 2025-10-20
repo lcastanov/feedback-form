@@ -32,3 +32,17 @@ h1 {
     margin-bottom: 50px;
 }
 
+.data-tooltip {
+    display: none; /* hidden by default */
+    position: absolute;
+    background-color: rgb(101, 104, 161);
+    color: white;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+.user-input {
+    position: relative;
+    margin-bottom: 20px;
+}

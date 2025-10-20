@@ -11,6 +11,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 })
 
+// Tooltip
+document.addEventListener('DOMContentLoaded', () => {
+    const inputs = document.querySelectorAll('.user-input input, .user-input textarea');
+
+    inputs.forEach(input => {
+        const tooltip = input.parentElement.querySelector('.data-tooltip');
+        input.addEventListener('mouseover', () =>{
+            tooltip.style.display = 'inline-block'
+        });
+        input.addEventListener('mouseout', () =>{
+            tooltip.style.display = 'none'
+        });
+    });
+})
 
 
 // Preventing submission if field is empty
