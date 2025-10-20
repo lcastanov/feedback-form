@@ -17,10 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     inputs.forEach(input => {
         const tooltip = input.parentElement.querySelector('.data-tooltip');
-        input.addEventListener('mouseover', () =>{
+        input.addEventListener('mouseover', () => {
             tooltip.style.display = 'inline-block'
         });
-        input.addEventListener('mouseout', () =>{
+        input.addEventListener('mouseout', () => {
             tooltip.style.display = 'none'
         });
     });
@@ -37,4 +37,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const userError = document.getElementById('username-error');
     const emailError = document.getElementById('email-error');
     const commentsError = document.getElementById('comments-error');
+
+    form.addEventListener('submit', (event) =>{
+        let valid = true;
+        userInput.value.trim() === '' && (userError.textContent = 'Field cannot be empty') && (valid = false);
+        userInput.value.trim() !== '' && (userError.textContent = '')
+
+        emailInput.value.trim() === '' && (emailError.textContent = 'Field cannot be empty') && (valid = false);
+        emailInput.value.trim() !== '' && (emailError.textContent = '')
+
+        commentsInput.value.trim() === '' && (commentsError.textContent = 'Field cannot be empty') && (valid = false);
+        commentsInput.value.trim() !== '' && (commentsError.textContent = '')
+
+        !valid && event.preventDefault(); // Prevents submit if empty
+    })
 })
